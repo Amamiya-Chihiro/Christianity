@@ -1,0 +1,8 @@
+site_name: 我的神学网站
+
+docs_dir: 网页
+
+nav:
+  - 首页: index.md
+  - 救赎论科普:
+      - 序言: 救赎论科普/序言.md
