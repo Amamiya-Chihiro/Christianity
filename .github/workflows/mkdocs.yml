@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,12 +18,13 @@ jobs:
           python-version: 3.11
 
       - name: Install MkDocs
-        run: pip install mkdocs
+        run: |
+          pip install mkdocs mkdocs-material
 
       - name: Build site
         run: mkdocs build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
